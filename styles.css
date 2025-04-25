@@ -1,0 +1,226 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 50px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.profile-photo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #0d1526;
+    box-shadow: 0 4px 15px rgba(75, 190, 162, 0.2);
+    flex-shrink: 0;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-text {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    font-size: 4.5em;
+    font-weight: 700;
+    margin: 0;
+    color: #191a44;
+}
+
+.moving-line-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 15px 0;
+    position: relative;
+}
+
+header .moving-line {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 10px 0;
+    color: #363636ff;
+    animation: moveText 15s linear infinite;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    left: 100%;
+    transform: translateX(-100%);
+    padding-right: 100%;
+}
+
+@keyframes moveText {
+    0% { 
+        transform: translateX(0);
+        left: 100%;
+    }
+    100% { 
+        transform: translateX(-100%);
+        left: 0;
+    }
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+nav ul li {
+    background: #1e3c72;
+    padding: 12px 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+nav ul li:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Content Box Styles */
+.content-box {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    padding: 40px 30px;
+    width: 85%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.content-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.content-box h2 {
+    font-size: 2.5em;
+    color: #1e3c72;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Certificate Box Styles */
+.certificate-box {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.certificate-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.certificate-box h3 {
+    margin: 0 0 10px;
+    font-size: 1.8em;
+    color: #1e3c72;
+}
+
+/* Footer */
+footer {
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+    
+    header h1 {
+        font-size: 2.5em;
+    }
+    
+    header .moving-line {
+        font-size: 1.2em;
+        animation: moveTextMobile 12s linear infinite;
+    }
+    
+    @keyframes moveTextMobile {
+        0% { 
+            transform: translateX(0);
+            left: 100%;
+        }
+        100% { 
+            transform: translateX(-100%);
+            left: 0;
+        }
+    }
+    
+    .content-box {
+        width: 90%;
+        padding: 30px 20px;
+    }
+    
+    nav ul {
+        gap: 10px;
+    }
+    
+    nav ul li {
+        padding: 10px 15px;
+    }
+}
